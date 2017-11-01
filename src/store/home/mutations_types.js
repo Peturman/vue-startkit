@@ -3,4 +3,4 @@
  */
 
 // 更新用户信息
-export const UPDATE_USERINFO = 'UPDATE_USERINFO'
+export const GET_ARTICLE_LIST = 'GET_ARTICLE_LIST'

@@ -1,12 +1,8 @@
-/**
- * Created by sailengsi on 2017/5/10.
- */
-import store from '../store'
 import * as types from './mutations_types'
 
 export default {
-  [types.UPDATE_USERINFO](state, userDb) {
-    state.userinfo = userDb.userinfo || {}
-    store.set('userinfo', state.userinfo)
+  [types.GET_ARTICLE_LIST](state, res) {
+    state.articleList = { ...state, ...res.data }
+    state.title = 'hello'
   }
 }

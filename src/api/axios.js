@@ -1,4 +1,4 @@
-import VueAxios from 'vue-axios'
+import axios from 'axios'
 
 /**
  * 检查接口响应状态码
@@ -57,9 +57,9 @@ function handleError (e) {
 
 export default {
   request: (url, config) => {
-    return VueAxios(url, config)
+    return axios(url, config)
     .then(checkStatus)
-    .then(rsp => rsp.json())
+    .then(rsp => rsp)
     .catch(handleError)
   }
 }

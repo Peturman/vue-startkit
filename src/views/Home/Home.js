@@ -1,13 +1,21 @@
 import MyHeader from '@/components/MyHeader/MyHeader'
+import { mapState } from 'vuex'
 
 export default {
   name: 'hello',
   components: {
     MyHeader
   },
-  data () {
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
     }
+  },
+  mounted() {
+    this.$store.dispatch('getArticleList')
+  },
+  computed: {
+    ...mapState([
+      'title'
+    ])
   }
 }

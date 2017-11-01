@@ -1,8 +1,14 @@
 /**
  * Created by sailengsi on 2017/5/10.
  */
-const getUserinfo = (state) => state.userinfo
+
+const getArticleList = state => state.articleList
+const setTitle = state => {
+  console.log(1)
+  return state.title
+}
 
 export default {
-  getUserinfo
+  getArticleList,
+  setTitle
 }

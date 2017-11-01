@@ -1,16 +1,12 @@
-/**
- * Created by sailengsi on 2017/5/10.
- */
-
 import * as types from './mutations_types.js'
+import requestAPI from '@/api/index'
 
-const updateUserInfo = ({commit}, {userinfo}) => {
-  return new Promise((resolve, reject) => {
-    commit(types.UPDATE_USERINFO, {
-      userinfo
-    })
-    resolve()
+const getArticleList = ({commit}) => {
+  console.log('进入action')
+  requestAPI('getArticleList').then((res) => {
+    console.log('action中调用封装后的axios成功')
+    commit(types.GET_ARTICLE_LIST, res)
   })
 }
 
-export default { updateUserInfo }
+export default { getArticleList }
