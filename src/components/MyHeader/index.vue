@@ -3,8 +3,7 @@
     <div class="icon"></div>
     <h1 class="text">Chicken Music</h1>
 
-    <!-- 个人中心 -->
-    <router-link to="/user" class="mine" tag="div">
+    <router-link to="/home/demo" class="mine" tag="div">
       <i class="icon-mine"></i>
     </router-link>
   </div>

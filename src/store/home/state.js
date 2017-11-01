@@ -2,6 +2,5 @@
  * Created by sailengsi on 2017/5/10.
  */
 export default {
-  articleList: [],
-  title: ''
+  count: 0
 }

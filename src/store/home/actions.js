@@ -1,12 +1,19 @@
 import * as types from './mutations_types.js'
-import requestAPI from '@/api/index'
 
-const getArticleList = ({commit}) => {
+const increase = ({commit}) => {
   console.log('进入action')
-  requestAPI('getArticleList').then((res) => {
-    console.log('action中调用封装后的axios成功')
-    commit(types.GET_ARTICLE_LIST, res)
+  return new Promise((resolve, reject) => {
+    console.log('触发commit')
+    commit(types.INCREASE)
+    resolve()
   })
 }
 
-export default { getArticleList }
+const decrease = ({commit}) => {
+  return new Promise((resolve, reject) => {
+    commit(types.DECREASE)
+    resolve()
+  })
+}
+
+export default { increase, decrease }

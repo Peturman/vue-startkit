@@ -1,14 +1,7 @@
-/**
- * Created by sailengsi on 2017/5/10.
- */
-
-const getArticleList = state => state.articleList
-const setTitle = state => {
-  console.log(1)
-  return state.title
-}
+const increase = state => state.count
+const decrease = state => state.count
 
 export default {
-  getArticleList,
-  setTitle
+  increase,
+  decrease
 }
